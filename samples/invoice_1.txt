@@ -1,0 +1,21 @@
+ACME INDUSTRIAL SUPPLIES
+221B Baker Street, London, UK
+
+INVOICE
+
+Invoice #: INV-2024-0091
+Date: 03/14/2024
+Bill To: Greenfield Construction Ltd.
+
+Description                Qty   Price      Amount
+Steel Pipes (2in)           40   $12.50     $500.00
+Welding Rods (box)          10   $8.00      $80.00
+Safety Helmets               5   $15.00     $75.00
+Labour - Installation         1   $200.00    $200.00
+
+Subtotal:                              $855.00
+Tax (10%):                             $85.50
+Shipping:                              $20.00
+Total:                                 $960.50
+
+Payment due within 30 days. Thank you for your business!

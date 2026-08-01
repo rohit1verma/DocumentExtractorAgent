@@ -1,0 +1,79 @@
+{
+  "source_file": "invoice_1.txt",
+  "extracted_data": {
+    "document_type": "invoice",
+    "document_id": "INV-2024-0091",
+    "date": "2024-03-14",
+    "vendor_name": "ACME INDUSTRIAL SUPPLIES",
+    "vendor_address": "221B Baker Street, London, UK",
+    "customer_name": "Greenfield Construction Ltd.",
+    "customer_address": null,
+    "line_items": [
+      {
+        "description": "Steel Pipes (2in)",
+        "quantity": 40.0,
+        "unit_price": 12.5,
+        "amount": 500.0
+      },
+      {
+        "description": "Welding Rods (box)",
+        "quantity": 10.0,
+        "unit_price": 8.0,
+        "amount": 80.0
+      },
+      {
+        "description": "Safety Helmets",
+        "quantity": 5.0,
+        "unit_price": 15.0,
+        "amount": 75.0
+      },
+      {
+        "description": "Labour - Installation",
+        "quantity": 1.0,
+        "unit_price": 200.0,
+        "amount": 200.0
+      }
+    ],
+    "subtotal": 855.0,
+    "tax": 85.5,
+    "shipping": 20.0,
+    "discount": null,
+    "total": 960.5,
+    "currency": "USD"
+  },
+  "validation_report": {
+    "checks": [
+      {
+        "name": "line_items_sum_matches_subtotal",
+        "status": "pass",
+        "detail": "Line items sum to 855.0, matches 855.0."
+      },
+      {
+        "name": "subtotal_tax_shipping_discount_equals_total",
+        "status": "pass",
+        "detail": "subtotal+tax+shipping-discount = 960.5, matches total 960.5."
+      },
+      {
+        "name": "date_is_valid",
+        "status": "pass",
+        "detail": "Date '2024-03-14' parses to 2024-03-14."
+      },
+      {
+        "name": "required_fields_present",
+        "status": "pass",
+        "detail": "All key identifying fields present."
+      },
+      {
+        "name": "no_unexpected_negative_amounts",
+        "status": "pass",
+        "detail": "No negative line item amounts."
+      }
+    ],
+    "summary": {
+      "passed": 5,
+      "warnings": 0,
+      "failed": 0,
+      "total_checks": 5
+    }
+  }
+}

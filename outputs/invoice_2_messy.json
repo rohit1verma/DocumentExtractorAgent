@@ -1,0 +1,73 @@
+{
+  "source_file": "invoice_2_messy.txt",
+  "extracted_data": {
+    "document_type": "invoice",
+    "document_id": "TS/24-25/0456",
+    "date": "2024-11-05",
+    "vendor_name": "TechSource Distributors Pvt Ltd",
+    "vendor_address": "Plot 14, Industrial Area Phase 2, Chandigarh, India",
+    "customer_name": "Bright Future Electronics",
+    "customer_address": null,
+    "line_items": [
+      {
+        "description": "USB-C Cable 1m",
+        "quantity": 25.0,
+        "unit_price": 150.0,
+        "amount": 3750.0
+      },
+      {
+        "description": "Wireless Mouse",
+        "quantity": 10.0,
+        "unit_price": 650.0,
+        "amount": 6500.0
+      },
+      {
+        "description": "HDMI Adapter",
+        "quantity": 15.0,
+        "unit_price": 220.0,
+        "amount": 3300.0
+      }
+    ],
+    "subtotal": 13550.0,
+    "tax": 2439.0,
+    "shipping": null,
+    "discount": null,
+    "total": 15989.0,
+    "currency": "INR"
+  },
+  "validation_report": {
+    "checks": [
+      {
+        "name": "line_items_sum_matches_subtotal",
+        "status": "pass",
+        "detail": "Line items sum to 13550.0, matches 13550.0."
+      },
+      {
+        "name": "subtotal_tax_shipping_discount_equals_total",
+        "status": "pass",
+        "detail": "subtotal+tax+shipping-discount = 15989.0, matches total 15989.0."
+      },
+      {
+        "name": "date_is_valid",
+        "status": "pass",
+        "detail": "Date '2024-11-05' parses to 2024-11-05."
+      },
+      {
+        "name": "required_fields_present",
+        "status": "pass",
+        "detail": "All key identifying fields present."
+      },
+      {
+        "name": "no_unexpected_negative_amounts",
+        "status": "pass",
+        "detail": "No negative line item amounts."
+      }
+    ],
+    "summary": {
+      "passed": 5,
+      "warnings": 0,
+      "failed": 0,
+      "total_checks": 5
+    }
+  }
+}

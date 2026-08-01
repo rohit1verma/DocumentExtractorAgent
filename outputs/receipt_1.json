@@ -1,0 +1,73 @@
+{
+  "source_file": "receipt_1.txt",
+  "extracted_data": {
+    "document_type": "receipt",
+    "document_id": "R-88213",
+    "date": "2025-01-03",
+    "vendor_name": "GREEN LEAF CAFE",
+    "vendor_address": "45 Market St, Springfield",
+    "customer_name": null,
+    "customer_address": null,
+    "line_items": [
+      {
+        "description": "Cappuccino",
+        "quantity": 1.0,
+        "unit_price": 4.5,
+        "amount": 4.5
+      },
+      {
+        "description": "Blueberry Muffin",
+        "quantity": 2.0,
+        "unit_price": 3.5,
+        "amount": 7.0
+      },
+      {
+        "description": "Orange Juice",
+        "quantity": 1.0,
+        "unit_price": 3.25,
+        "amount": 3.25
+      }
+    ],
+    "subtotal": 14.75,
+    "tax": 1.25,
+    "shipping": null,
+    "discount": null,
+    "total": 17.0,
+    "currency": "USD"
+  },
+  "validation_report": {
+    "checks": [
+      {
+        "name": "line_items_sum_matches_subtotal",
+        "status": "pass",
+        "detail": "Line items sum to 14.75, matches 14.75."
+      },
+      {
+        "name": "subtotal_tax_shipping_discount_equals_total",
+        "status": "fail",
+        "detail": "Expected total ~16.0, but document total is 17.0 (diff 1.0)."
+      },
+      {
+        "name": "date_is_valid",
+        "status": "pass",
+        "detail": "Date '2025-01-03' parses to 2025-01-03."
+      },
+      {
+        "name": "required_fields_present",
+        "status": "pass",
+        "detail": "All key identifying fields present."
+      },
+      {
+        "name": "no_unexpected_negative_amounts",
+        "status": "pass",
+        "detail": "No negative line item amounts."
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "warnings": 0,
+      "failed": 1,
+      "total_checks": 5
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "source_file": "restimages.jpg",
+  "extracted_data": {
+    "document_type": "receipt",
+    "document_id": null,
+    "date": "2019-11-20",
+    "vendor_name": "HARBOR LANE CAFE",
+    "vendor_address": "3941 GREEN OAKS BLVD CHICAGO, IL",
+    "customer_name": null,
+    "customer_address": null,
+    "line_items": [
+      {
+        "description": "Tacos Del Mal Shrimp",
+        "quantity": 1.0,
+        "unit_price": 14.98,
+        "amount": 14.98
+      },
+      {
+        "description": "Especial Salad Chicken",
+        "quantity": 1.0,
+        "unit_price": 12.5,
+        "amount": 12.5
+      },
+      {
+        "description": "Fountain Beverage",
+        "quantity": 1.0,
+        "unit_price": 1.99,
+        "amount": 1.99
+      }
+    ],
+    "subtotal": 29.47,
+    "tax": 1.92,
+    "shipping": null,
+    "discount": null,
+    "total": 31.39,
+    "currency": "USD"
+  },
+  "validation_report": {
+    "checks": [
+      {
+        "name": "line_items_sum_matches_subtotal",
+        "status": "pass",
+        "detail": "Line items sum to 29.47, matches 29.47."
+      },
+      {
+        "name": "subtotal_tax_shipping_discount_equals_total",
+        "status": "pass",
+        "detail": "subtotal+tax+shipping-discount = 31.39, matches total 31.39."
+      },
+      {
+        "name": "date_is_valid",
+        "status": "pass",
+        "detail": "Date '2019-11-20' parses to 2019-11-20."
+      },
+      {
+        "name": "required_fields_present",
+        "status": "warning",
+        "detail": "Missing/uncertain fields: document_id."
+      },
+      {
+        "name": "no_unexpected_negative_amounts",
+        "status": "pass",
+        "detail": "No negative line item amounts."
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "warnings": 1,
+      "failed": 0,
+      "total_checks": 5
+    }
+  }
+}

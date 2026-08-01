@@ -1,0 +1,73 @@
+{
+  "source_file": "restimages2.jpg",
+  "extracted_data": {
+    "document_type": "receipt",
+    "document_id": "101",
+    "date": "2012-03-15",
+    "vendor_name": "Restaurant Name",
+    "vendor_address": "Address 1 Address 2",
+    "customer_name": null,
+    "customer_address": null,
+    "line_items": [
+      {
+        "description": "Bloody Mary",
+        "quantity": 5.0,
+        "unit_price": null,
+        "amount": 40.75
+      },
+      {
+        "description": "fresh oyster",
+        "quantity": 1.0,
+        "unit_price": 12.5,
+        "amount": 12.5
+      },
+      {
+        "description": "Fudge Cake",
+        "quantity": 1.0,
+        "unit_price": 4.25,
+        "amount": 4.25
+      }
+    ],
+    "subtotal": null,
+    "tax": null,
+    "shipping": null,
+    "discount": null,
+    "total": null,
+    "currency": "USD"
+  },
+  "validation_report": {
+    "checks": [
+      {
+        "name": "line_items_sum_matches_subtotal",
+        "status": "skipped",
+        "detail": "No subtotal/total to compare against."
+      },
+      {
+        "name": "subtotal_tax_shipping_discount_equals_total",
+        "status": "skipped",
+        "detail": "Missing subtotal or total."
+      },
+      {
+        "name": "date_is_valid",
+        "status": "pass",
+        "detail": "Date '2012-03-15' parses to 2012-03-15."
+      },
+      {
+        "name": "required_fields_present",
+        "status": "warning",
+        "detail": "Missing/uncertain fields: total."
+      },
+      {
+        "name": "no_unexpected_negative_amounts",
+        "status": "pass",
+        "detail": "No negative line item amounts."
+      }
+    ],
+    "summary": {
+      "passed": 2,
+      "warnings": 1,
+      "failed": 0,
+      "total_checks": 5
+    }
+  }
+}

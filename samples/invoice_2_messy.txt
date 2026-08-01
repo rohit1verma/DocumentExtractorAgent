@@ -1,0 +1,19 @@
+TechSource Distributors Pvt Ltd
+Plot 14, Industrial Area Phase 2, Chandigarh, India
+
+Invoice No : TS/24-25/0456
+Invoice Date : 2024-11-05
+
+Buyer: Bright Future Electronics
+
+Item Description             Qty    Rate       Amount
+USB-C Cable 1m                 25    150.00     3750.00
+Wireless Mouse                 10    650.00     6500.00
+HDMI Adapter                   15    220.00     3300.00
+
+Sub Total                                       13550.00
+GST (18%)                                       2439.00
+Total Amount                                    15989.00
+
+Currency: INR
+Terms: Net 15 days
