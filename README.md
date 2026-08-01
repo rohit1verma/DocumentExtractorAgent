@@ -218,6 +218,25 @@ doc-extractor-agent/
 
 ---
 
+---
+
+## 6. Running the tests
+
+`test_agent.py` covers the deterministic parts of the agent — the Pydantic
+schema and all 5 validator sanity checks — with 19 offline unit tests. No
+API key or network call needed, so these run in under a second:
+
+```bash
+pytest test_agent.py -v
+```
+
+Notably, `test_total_math_incorrect_fails` reproduces the exact intentional
+bug in `samples/receipt_1.txt` (a $1.00 total discrepancy) to prove the
+validator actually catches real-world data-entry errors, not just synthetic
+ones.
+
+---
+
 ## Tradeoffs & known limitations
 
 **Model choice — OpenRouter free tier over paid APIs.**
